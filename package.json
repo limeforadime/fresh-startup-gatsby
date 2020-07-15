@@ -13,6 +13,10 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
+  "prettier": {
+    "arrowParens": "always",
+    "singleQuote": true
+  },
   "dependencies": {
     "gatsby": "^2.23.12",
     "react": "^16.12.0",
