@@ -1,0 +1,10 @@
+@import '../base/variables';
+@import '../base/media-queries';
+
+.testimonials__img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: translateX();
+}

@@ -1,0 +1,170 @@
+@import '../base/variables';
+@import '../base/media-queries';
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: $veryLightGreen;
+  padding-top: 1.5rem;
+
+  * {
+    z-index: 10;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  // a {
+  //   color: rgb(226, 226, 226);
+  //   text-decoration: none;
+  //   letter-spacing: 3px;
+  //   font-weight: bold;
+  //   font-size: 0.85rem;
+  // }
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.nav__logo--img {
+  width: 50px;
+}
+
+.nav__logo--text {
+  color: $purple;
+  font-style: normal;
+  letter-spacing: 4px;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 74px;
+  font-family: 'Sirin Stencil', cursive;
+
+  @include tablet {
+    font-size: 2.5rem;
+  }
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 0;
+  overflow-x: hidden;
+  /* was under onlyPhone */
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  height: 90vh;
+  top: 0;
+  background-color: $darkPurple;
+  transition: all 0.3s ease-in, opacity 0.3s ease;
+
+  li {
+    opacity: 0;
+    @include tablet {
+      opacity: 1;
+    }
+  }
+
+  a {
+    font-size: 1.5rem;
+    transition: color 0.4s ease;
+    text-decoration: none;
+    @include abovePhone {
+    }
+
+    @include tablet {
+      font-size: 14px;
+      line-height: 25px;
+      color: $darkGreen;
+
+      font-weight: bold;
+      &:hover {
+        color: $purple;
+      }
+    }
+
+    @include laptop {
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+  }
+
+  @include tablet {
+    margin-right: 6%;
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+    height: initial;
+    top: initial;
+    background-color: transparent;
+    margin-right: 10%;
+  }
+  @include laptop {
+    width: 60%;
+  }
+  @include desktop {
+    width: 50%;
+  }
+}
+
+.nav-active {
+  width: 60%;
+  @include tablet {
+    width: unset;
+  }
+}
+
+.burger {
+  cursor: pointer;
+  display: block;
+  padding-right: 2rem;
+
+  div {
+    width: 30px;
+    height: 4px;
+    background-color: $purple;
+    border-radius: 9px;
+    margin: 8px;
+    transition: all 0.3s ease;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.toggle {
+  .line1 {
+    transform: rotate(-45deg) translate(-11px, 6px);
+    background-color: $veryLightGreen;
+  }
+
+  .line2 {
+    opacity: 0;
+  }
+
+  .line3 {
+    transform: rotate(45deg) translate(-10px, -6px);
+    background-color: $veryLightGreen;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

@@ -1,14 +1,6 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import Header from '../components/header';
+import React, { Component, Fragment } from 'react';
+import App from '../App';
 
-export default function Home() {
-  return (
-    <div style={{ color: `purple` }}>
-      <Link to="/contact/">Contact</Link>
-      <Header headerText="Hello Gatsby!" />
-      <p>Testing deployment to netlify</p>
-      <img src="https://source.unsplash.com/random/400x200" alt="" />
-    </div>
-  );
-}
+const Index = () => <App />;
+
+export default Index;

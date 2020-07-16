@@ -1,0 +1,27 @@
+@import './variables.scss';
+
+@mixin abovePhone {
+  @media screen and (min-width: $phoneWidth) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  // @media screen and (min-width: $tabletWidth) and (max-width: $laptopWidth) {
+  @media screen and (min-width: $tabletWidth) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  // @media screen and (min-width: $tabletWidth + 1) and (max-width: $desktopWidth - 1) {
+  @media screen and (min-width: $laptopWidth) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktopWidth) {
+    @content;
+  }
+}

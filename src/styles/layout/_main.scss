@@ -1,0 +1,54 @@
+@import '../base/variables';
+@import '../base/media-queries';
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 8vh repeat(6, auto);
+  grid-template-areas:
+    'navbar'
+    'hero'
+    'feature1'
+    'feature2'
+    'feature3'
+    'testimonials'
+    'footer';
+}
+
+#header {
+  grid-area: navbar;
+}
+
+#hero {
+  padding-top: 300px;
+  background-color: #e9ffdd;
+  grid-area: hero;
+  overflow: hidden;
+}
+
+#feature1 {
+  grid-area: feature1;
+}
+
+#feature2 {
+  grid-area: feature2;
+}
+
+#feature3 {
+  grid-area: feature3;
+}
+
+#testimonials {
+  grid-area: testimonials;
+}
+
+#footer {
+  grid-area: footer;
+}
+
+.section__wrapper {
+  position: relative;
+  // width: 100%;
+  // height: 100%;
+  z-index: 1;
+}

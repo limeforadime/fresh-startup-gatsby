@@ -6,5 +6,10 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
-}
+  siteMetadata: {
+    title: 'Fresh Startup Site',
+    description: 'My Modern Startup design that I am creating using Gatsby.',
+    author: 'Dave',
+  },
+  plugins: ['gatsby-plugin-sass'],
+};
