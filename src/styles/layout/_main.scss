@@ -4,7 +4,7 @@
 .grid-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 8vh repeat(6, auto);
+  grid-template-rows: 8vh 500px 600px 600px 800px 600px 600px;
   grid-template-areas:
     'navbar'
     'hero'
@@ -20,14 +20,14 @@
 }
 
 #hero {
-  padding-top: 300px;
-  background-color: #e9ffdd;
   grid-area: hero;
   overflow: hidden;
 }
 
 #feature1 {
   grid-area: feature1;
+  display: flex;
+  // align-items: flex-end;
 }
 
 #feature2 {
@@ -36,10 +36,12 @@
 
 #feature3 {
   grid-area: feature3;
+  display: flex;
 }
 
 #testimonials {
   grid-area: testimonials;
+  display: flex;
 }
 
 #footer {
@@ -47,8 +49,15 @@
 }
 
 .section__wrapper {
-  position: relative;
-  // width: 100%;
-  // height: 100%;
-  z-index: 1;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  // Saw this on one of Brad's videos, might be helpful:
+  //   display: grid;
+  //   grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+
+  // And then the content he wanted in the two center columns
+  // had this applied:
+  //   .content-wrap {
+  //     grid-column: 2 / 4;
+  //   }
 }

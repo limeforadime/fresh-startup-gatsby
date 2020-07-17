@@ -1,37 +1,48 @@
 @import '../base/variables';
 @import '../base/media-queries';
 
-.grass {
-  background-color: inherit;
-  position: absolute;
+#hero {
   width: 100%;
-  left: -1px;
-  bottom: 0;
-  z-index: 1;
-
-  @include laptop {
-    transform: translateY(50px);
-  }
-  @include desktop {
-    width: 120%;
-    transform: translateY(200px);
-  }
+  height: 100%;
+  background-color: #e9ffdd;
 }
 
-.humaaan {
-  position: absolute;
-  width: 150px;
-  left: 13%;
-  bottom: 30%;
-  z-index: 2;
+.section__wrapper--hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 0 auto;
+}
 
-  @include tablet {
-    width: 200px;
-    left: 15%;
-    bottom: 30%;
-  }
+.hero__title {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #8158db;
+  margin: 9rem auto 4rem auto;
+}
 
-  @include laptop {
-    width: 220px;
+.hero__cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 213px;
+  height: 64px;
+  background: $orange;
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  text-decoration: none;
+  margin-top: 1rem;
+
+  color: $veryLightGreen;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: darken($orange, 15%);
+    color: white;
   }
 }

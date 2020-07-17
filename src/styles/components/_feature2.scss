@@ -1,7 +1,21 @@
 @import '../base/variables';
 @import '../base/media-queries';
 
+.section__wrapper--feature2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25% 25% 50%;
+  gap: 2%;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  margin-top: 0;
+}
+
 .laughing-woman {
-  width: 20rem;
-  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
 }

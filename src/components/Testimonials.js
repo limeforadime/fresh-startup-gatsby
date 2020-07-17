@@ -1,10 +1,11 @@
 import React from 'react';
+import quote from '../assets/images/quote.svg';
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="testimonials__background">
+    <section id="testimonials">
       <div className="section__wrapper">
-        <h2>What others are saying about us</h2>
+        <h2 className="section__title">What others are saying about us</h2>
 
         <div className="testimonials__wrapper">
           <div className="testimonials__item">
@@ -15,7 +16,7 @@ const Testimonials = () => {
             />
             <div className="testimonials__quote__wrapper">
               <img
-                src="/assets/"
+                src={quote}
                 alt="Quote"
                 className="testimonials__quote--img"
               />
@@ -33,7 +34,7 @@ const Testimonials = () => {
             />
             <div className="testimonials__quote__wrapper">
               <img
-                src="/assets/"
+                src={quote}
                 alt="Quote"
                 className="testimonials__quote--img"
               />
@@ -51,7 +52,7 @@ const Testimonials = () => {
             />
             <div className="testimonials__quote__wrapper">
               <img
-                src="/assets/"
+                src={quote}
                 alt="Quote"
                 className="testimonials__quote--img"
               />

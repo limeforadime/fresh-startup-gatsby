@@ -9,6 +9,7 @@ import {
   Testimonials,
   Footer,
 } from './components';
+import './styles/index.scss';
 
 class App extends Component {
   constructor(props) {
@@ -28,7 +29,6 @@ class App extends Component {
           <Testimonials />
           <Footer />
         </div>
-        <script src="/js/index.js"></script>
       </Fragment>
     );
   }

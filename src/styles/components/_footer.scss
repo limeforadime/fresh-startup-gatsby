@@ -4,3 +4,23 @@
 .footer__logo--img {
   width: 50px;
 }
+
+.signup-arrow--span {
+  // might not need:
+  display: inline-block;
+}
+
+.section__title--footer {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 65px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: $lightGreen;
+}

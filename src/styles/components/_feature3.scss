@@ -1,2 +1,48 @@
 @import '../base/variables';
 @import '../base/media-queries';
+
+.section__wrapper--feature3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 65%;
+  margin: auto;
+}
+
+.bullet-point__item {
+  display: grid;
+  height: 100%;
+  gap: 10px;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 30% 70%;
+  grid-template-areas:
+    'icon title'
+    '.    description';
+}
+
+.bullet-point__icon {
+  grid-area: icon;
+  align-self: center;
+  justify-self: center;
+  width: 40px;
+}
+
+.bullet-point__title {
+  align-self: center;
+  grid-area: title;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: $veryLightGreen;
+}
+
+.bullet-point__description {
+  grid-area: description;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.025em;
+  color: $veryLightGreen;
+}

@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="section__wrapper">
         <div className="footer__grid-wrapper">
           <div className="footer__item footer__sign-up">
-            <h2 className="footer__item--title">Stay Connected</h2>
+            <h2 className="section__title--footer">Stay Connected</h2>
             <p>We'll let you know when the Thing is ready.</p>
             <input
               className="footer__email-input"
@@ -15,18 +15,30 @@ const Footer = () => {
               placeholder="Email Address"
             />
             <button className="footer__signup-btn">
-              Sign Up <i className="fa fa-arrowwwww" />
+              Sign Up{' '}
+              <span className="signup-arrow--span">
+                <img
+                  className="signup-arrow--img"
+                  src="../assets/images/arrow.svg"
+                />
+              </span>
             </button>
           </div>
 
           <div className="footer__item footer__contact">
             <h2 className="footer__item--title">Contact</h2>
             <div className="footer__contact--phone-wrapper">
-              <img className="footer__phone-img" src="/assets/phone.svg" />
+              <img
+                className="footer__phone-img"
+                src="../assets/images/phone.svg"
+              />
               <div className="footer__phone-number">1-(888)-888-8888</div>
             </div>
             <div className="footer__contact--email-wrapper">
-              <img className="footer__email-img" />
+              <img
+                className="footer__email-img"
+                src="../assets/images/email.svg"
+              />
               <div className="footer__email-address">asdf123@wuddup.com</div>
             </div>
           </div>

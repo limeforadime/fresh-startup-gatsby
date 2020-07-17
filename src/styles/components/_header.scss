@@ -30,18 +30,18 @@ nav {
 .nav__logo {
   display: flex;
   align-items: center;
-  padding-left: 2rem;
+  padding-left: 3%;
 }
 
 .nav__logo--img {
-  width: 50px;
+  width: 65px;
 }
 
 .nav__logo--text {
   color: $purple;
   font-style: normal;
   letter-spacing: 4px;
-  font-size: 2rem;
+  font-size: 3.3rem;
   font-weight: normal;
   line-height: 74px;
   font-family: 'Sirin Stencil', cursive;

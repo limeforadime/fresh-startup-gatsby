@@ -1,0 +1,34 @@
+@import '../base/variables';
+@import '../base/media-queries';
+
+.section__title {
+  justify-self: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 2.2rem;
+
+  &--dark {
+    color: $darkGreen;
+  }
+  &--light {
+    color: $veryLightGreen;
+  }
+}
+
+.feature__description {
+  justify-self: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.025em;
+
+  &--dark {
+    color: $darkGreen;
+  }
+  &--light {
+    color: $veryLightGreen;
+  }
+}
+
+.feature__img {
+  justify-self: center;
+}
