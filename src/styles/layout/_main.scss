@@ -4,7 +4,7 @@
 .grid-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 8vh 500px 600px 600px 800px 600px 600px;
+  grid-template-rows: 8vh 500px 600px 600px 800px 900px 800px;
   grid-template-areas:
     'navbar'
     'hero'
@@ -46,6 +46,8 @@
 
 #footer {
   grid-area: footer;
+  display: flex;
+  background-color: $purple;
 }
 
 .section__wrapper {

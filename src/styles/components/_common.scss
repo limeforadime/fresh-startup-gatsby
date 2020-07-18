@@ -10,6 +10,9 @@
   &--dark {
     color: $darkGreen;
   }
+  &--med-green {
+    color: $lightGreen;
+  }
   &--light {
     color: $veryLightGreen;
   }
@@ -31,4 +34,25 @@
 
 .feature__img {
   justify-self: center;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mlr-auto {
+  margin-left: auto;
+  margin-right: auto;
 }

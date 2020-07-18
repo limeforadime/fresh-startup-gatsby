@@ -4,7 +4,7 @@
 .section__wrapper--feature3 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: 10% repeat(4, 1fr);
   gap: 20px;
   justify-content: center;
   align-items: center;

@@ -1,13 +1,98 @@
 @import '../base/variables';
 @import '../base/media-queries';
 
-.footer__logo--img {
-  width: 50px;
+.section__wrapper--footer {
+  display: grid;
+  // grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 40% 10% 40%;
+  grid-template-rows: 38% 22% 18% 15% 10%;
+  grid-template-areas:
+    'signup     signup    signup'
+    'contact    .         navigation'
+    'about      about     about'
+    'logo       logo      logo'
+    'copyright  copyright copyright';
+  gap: 5%;
+  justify-content: center;
+  align-items: start;
+  justify-self: center;
+  align-self: stretch;
+  height: 80%;
+  width: 90%;
+  margin-top: 30px;
 }
 
-.signup-arrow--span {
-  // might not need:
-  display: inline-block;
+.footer__sign-up {
+  grid-area: signup;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  align-self: center;
+  justify-self: center;
+  height: 100%;
+  width: 100%;
+
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+.footer__contact {
+  grid-area: contact;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 100%;
+
+  &--phone-wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  &--email-wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
+
+.footer__navigation {
+  grid-area: navigation;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.footer__about {
+  grid-area: about;
+  justify-self: center;
+  height: 100%;
+  h2 {
+    text-align: center;
+  }
+}
+
+.footer__logo {
+  grid-area: logo;
+  display: flex;
+  justify-self: center;
+}
+
+.footer__copyright {
+  grid-area: copyright;
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 30px;
 }
 
 .section__title--footer {
@@ -16,11 +101,114 @@
   font-weight: bold;
   font-size: 40px;
   line-height: 65px;
-  /* identical to box height */
 
   display: flex;
   align-items: center;
   text-align: center;
-
   color: $lightGreen;
+}
+
+.footer__phone-icon {
+  width: 30px;
+  margin-right: 1rem;
+}
+
+.footer__email-icon {
+  width: 30px;
+  margin-right: 1rem;
+}
+
+.footer__email-input {
+  width: 100%;
+  height: 55px;
+  background-color: $veryLightGreen;
+  border: none;
+  border-radius: 0;
+  font-size: 1.7rem;
+  border-bottom: solid $darkGreen;
+  padding: 6px;
+}
+
+input[type='email']::placeholder {
+  color: rgba(128, 126, 126, 0.801);
+  font-size: 1.7rem;
+  padding-left: 1rem;
+}
+
+.footer__signup-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 55px;
+  background: $orange;
+  font-family: 'Ubuntu', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  text-decoration: none;
+  margin-top: 1rem;
+
+  color: $veryLightGreen;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: darken($orange, 15%);
+    color: white;
+  }
+}
+
+.signup-arrow--span {
+  // might not need:
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.signup-arrow--img {
+  width: 50%;
+}
+
+.footer__nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 67%;
+  margin-top: 20px;
+
+  li {
+    a {
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+
+      color: #e9ffdd;
+    }
+  }
+}
+
+.footer__item--description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.025em;
+  color: $veryLightGreen;
+}
+
+.footer__logo--img {
+  width: 90px;
+}
+
+.footer__logo--text {
+  color: $orange;
+  font-style: normal;
+  letter-spacing: 4px;
+  font-size: 4.9rem;
+  font-weight: normal;
+  line-height: 74px;
+  font-family: 'Sirin Stencil', cursive;
 }
