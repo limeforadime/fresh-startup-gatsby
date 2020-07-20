@@ -4,11 +4,11 @@
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   min-height: 8vh;
   font-family: 'Poppins', sans-serif;
   background-color: $veryLightGreen;
-  padding-top: 1.5rem;
+  // padding-top: 1.5rem;
 
   * {
     z-index: 10;
@@ -31,6 +31,7 @@ nav {
   display: flex;
   align-items: center;
   padding-left: 3%;
+  padding-top: 2rem;
 }
 
 .nav__logo--img {
@@ -54,31 +55,42 @@ nav {
 .nav-links {
   display: flex;
   justify-content: space-around;
-  width: 0;
-  overflow-x: hidden;
-  /* was under onlyPhone */
-  flex-direction: column;
   align-items: center;
-  position: absolute;
-  right: 0;
+  flex-direction: column;
+  transform: scale(0, 0);
+  width: 80%;
   height: 90vh;
+  transform-origin: top right;
+  transition: all 0.3s ease-in;
+  right: 0;
   top: 0;
-  background-color: $darkPurple;
-  transition: all 0.3s ease-in, opacity 0.3s ease;
+  position: absolute;
+
+  &--active {
+    overflow-x: hidden;
+    // height: 90vh;
+    background-color: $darkPurple;
+    transform: scale(1, 0.9);
+    transition: transform 0.3s ease;
+  }
 
   li {
-    opacity: 0;
     @include tablet {
       opacity: 1;
     }
   }
 
+  li:last-child a {
+    color: $orange;
+    font-weight: bold;
+  }
+
   a {
-    font-size: 1.5rem;
+    overflow: hidden;
+    font-size: 1.9rem;
     transition: color 0.4s ease;
     text-decoration: none;
-    @include abovePhone {
-    }
+    color: $veryLightGreen;
 
     @include tablet {
       font-size: 14px;
@@ -98,6 +110,7 @@ nav {
   }
 
   @include tablet {
+    display: flex;
     margin-right: 6%;
     width: 50%;
     flex-direction: row;
@@ -126,6 +139,7 @@ nav {
   cursor: pointer;
   display: block;
   padding-right: 2rem;
+  padding-top: 3rem;
 
   div {
     width: 30px;

@@ -1,0 +1,19 @@
+.modal__background {
+  background-size: cover;
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+
+  &--active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
