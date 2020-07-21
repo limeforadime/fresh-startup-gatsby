@@ -15,8 +15,8 @@ const backgroundStyle = {
 const Feature3 = () => {
   return (
     <section id="feature3" style={backgroundStyle}>
-      <div className="section__wrapper--feature3">
-        <h2 className="section__title section__title--light">
+      <div className="section__wrapper section__wrapper--feature3">
+        <h2 className="grid__feature3__title section__title section__title--light">
           What sets us apart?
         </h2>
 

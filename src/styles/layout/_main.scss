@@ -4,7 +4,7 @@
 .grid-wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 8vh 500px 600px 600px 800px 900px 800px;
+  grid-template-rows: 8vh 500px 600px 600px 800px 1050px 950px;
   grid-template-areas:
     'navbar'
     'hero'
@@ -14,7 +14,10 @@
     'testimonials'
     'footer';
   @include tablet {
-    grid-template-rows: 8vh 500px 600px 600px 850px 1200px 800px;
+    grid-template-rows: 8vh 500px 600px 600px 800px 1200px 800px;
+  }
+  @include laptop {
+    grid-template-rows: 8vh 550px 500px 500px 700px 600px 450px;
   }
 }
 
@@ -36,6 +39,7 @@
 
 #feature2 {
   grid-area: feature2;
+  display: flex;
 }
 
 #feature3 {

@@ -10,7 +10,7 @@ const Footer = () => {
     <footer id="footer">
       <div className="section__wrapper section__wrapper--footer">
         <div className="footer__item footer__sign-up">
-          <h2 className="section__title section__title--med-green">
+          <h2 className="section__title section__title--med-green footer__item--title text-align-left--larger-scrn">
             Stay Connected
           </h2>
           <p className="footer__item--description">
@@ -30,7 +30,9 @@ const Footer = () => {
         </div>
 
         <div className="footer__item footer__contact">
-          <h2 className="section__title section__title--med-green">Contact</h2>
+          <h2 className="section__title section__title--med-green footer__item--title text-align-left--larger-scrn">
+            Contact
+          </h2>
           <div className="footer__contact--phone-wrapper">
             <img className="footer__phone-icon" src={phone} />
             <p className="footer__phone-number footer__item--description">
@@ -46,7 +48,7 @@ const Footer = () => {
         </div>
 
         <div className="footer__item footer__navigation">
-          <h2 className="section__title section__title--med-green">
+          <h2 className="section__title section__title--med-green footer__item--title text-align-left--larger-scrn">
             Navigation
           </h2>
           <ul className="footer__nav-links">
@@ -63,7 +65,9 @@ const Footer = () => {
         </div>
 
         <div className="footer__item footer__about">
-          <h2 className="section__title section__title--med-green">About Us</h2>
+          <h2 className="section__title section__title--med-green footer__item--title text-align-left--larger-scrn">
+            About Us
+          </h2>
           <p className="footer__item--description mt-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam,
             purus sit amet luctus venenatis, lectus magna fringilla urna,

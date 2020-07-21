@@ -12,11 +12,11 @@ const backgroundStyle = {
 const Feature1 = () => {
   return (
     <section id="feature1" style={backgroundStyle}>
-      <div className="section__wrapper section__wrapper--feature1">
-        <h2 className="section__title section__title--light mt-responsive">
+      <div className="section__wrapper section__wrapper--feature1 mt-responsive">
+        <h2 className="grid__feature1__title section__title section__title--light">
           A new way to do the thing.
         </h2>
-        <p className="feature__description feature__description--light">
+        <p className="grid__feature1__description feature__description feature__description--light">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis ut
           ornare neque eget lectus nibh. Consequat, ultrices viverra sit turpis
           pulvinar non. Potenti metus adipiscing diam enim habitasse morbi risus
@@ -24,7 +24,7 @@ const Feature1 = () => {
           nunc.
         </p>
         <img
-          className="feature__img houseplant"
+          className="grid__feature1__img feature__img houseplant"
           src={houseplant}
           alt="Houseplant"
         />

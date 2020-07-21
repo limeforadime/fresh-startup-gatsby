@@ -8,7 +8,11 @@ nav {
   min-height: 8vh;
   font-family: 'Poppins', sans-serif;
   background-color: $veryLightGreen;
-  // padding-top: 1.5rem;
+
+  @include tablet {
+    max-width: $maxContentWidth;
+    margin: auto;
+  }
 
   * {
     z-index: 10;
@@ -48,11 +52,11 @@ nav {
   font-family: 'Sirin Stencil', cursive;
 
   @include tablet {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
-  @include desktop {
-    font-size: 4rem;
+  @include laptop {
+    font-size: 4.5rem;
   }
 }
 
@@ -69,11 +73,11 @@ nav {
   right: 0;
   top: 0;
   position: absolute;
+  z-index: 30;
 
   @include tablet {
     display: flex;
     position: initial;
-    margin-right: 6%;
     width: 50%;
     transform: none;
     align-self: center;
@@ -82,18 +86,22 @@ nav {
     height: 8vh;
     top: initial;
     background-color: transparent;
+    // margin-right: 10%;
     margin-right: 7%;
   }
 
   @include laptop {
     width: 55%;
-    max-width: 650px;
+    // margin-left: 10%;
+    // margin-right: 10%;
+    // max-width: 650px;
   }
 
   @include desktop {
-    width: 48%;
-    max-width: 750px;
-    margin-right: 13%;
+    // width: 48%;
+    margin-right: 0;
+    // max-width: 750px;
+    // margin-right: 13%;
   }
 
   &--active {
@@ -116,7 +124,7 @@ nav {
     @include tablet {
       &:hover {
         color: $purple;
-        text-shadow: 0 0 9px darken($darkGreen, $amount: 5);
+        text-shadow: 0 0 9px darken($darkGreen, 5);
       }
     }
   }
@@ -136,7 +144,7 @@ nav {
       font-weight: bold;
       &:hover {
         color: $purple;
-        text-shadow: 0 0 9px darken($darkGreen, $amount: 5);
+        text-shadow: 0 0 9px darken($darkGreen, 5);
       }
     }
 
@@ -146,7 +154,7 @@ nav {
     }
 
     @include desktop {
-      font-size: 2rem;
+      // font-size: 2rem;
     }
   }
 }
@@ -163,6 +171,7 @@ nav {
   display: block;
   padding-right: 2rem;
   padding-top: 3rem;
+  z-index: 30;
 
   div {
     pointer-events: none;

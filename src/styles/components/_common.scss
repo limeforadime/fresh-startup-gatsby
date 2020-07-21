@@ -4,10 +4,24 @@
 .section__wrapper {
   margin-left: 3rem;
   margin-right: 3rem;
-  @include tablet {
+  max-width: $maxContentWidth;
+
+  // @include tablet {
+  //   margin-left: 3rem;
+  //   margin-right: auto;
+  // }
+  @include laptop {
+    // margin-left: auto;
+    // margin-right: auto;
     margin-left: 10%;
     margin-right: 10%;
   }
+
+  @include desktop {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   // Saw this on one of Brad's videos, might be helpful:
   //   display: grid;
   //   grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
@@ -27,6 +41,11 @@
 
   @include tablet {
     font-size: 2.8rem;
+    margin-top: 0;
+  }
+
+  @include desktop {
+    font-size: 3.1rem;
   }
 
   &--dark {
@@ -43,18 +62,30 @@
 .feature__description {
   justify-self: center;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   letter-spacing: 0.025em;
+
+  @include tablet {
+    font-size: 1.5rem;
+    letter-spacing: 0.03em;
+    line-height: 2.1rem;
+  }
+
+  @include laptop {
+    font-size: 1.7rem;
+  }
+
+  @include desktop {
+    font-size: 1.9rem;
+    letter-spacing: 0.02em;
+    line-height: 2.3rem;
+  }
 
   &--dark {
     color: $darkGreen;
   }
   &--light {
     color: $veryLightGreen;
-  }
-  @include tablet {
-    letter-spacing: 0.04em;
-    line-height: 2.1rem;
   }
 }
 
@@ -90,4 +121,9 @@
   @include laptop {
     margin-top: 3rem;
   }
+}
+
+.text-align-left--larger-scrn {
+  justify-self: start;
+  text-align: start;
 }

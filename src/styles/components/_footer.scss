@@ -5,21 +5,40 @@
   display: grid;
   // grid-template-columns: repeat(6, 1fr);
   grid-template-columns: 40% 10% 40%;
-  grid-template-rows: 38% 22% 18% 15% 10%;
+  grid-template-rows: 30% 26% 18% 11% 10%;
   grid-template-areas:
     'signup     signup    signup'
     'contact    .         navigation'
     'about      about     about'
     'logo       logo      logo'
     'copyright  copyright copyright';
-  gap: 5%;
+  gap: 4%;
   justify-content: center;
   align-items: start;
   justify-self: center;
-  align-self: stretch;
-  height: 80%;
+  align-self: center;
+  height: 82%;
   width: 90%;
-  margin-top: 30px;
+  margin-top: 1rem;
+
+  @include laptop {
+    width: 100%;
+    margin-top: 0;
+    height: 65%;
+    // width: 70%;
+    grid-template-columns: 1.7fr repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 0.2fr;
+    align-items: start;
+    align-content: start;
+    grid-template-areas:
+      'signup  contact  navigation  about'
+      'signup  contact  navigation  logo'
+      '.       .        .           copyright';
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
 }
 
 .footer__sign-up {
@@ -35,10 +54,18 @@
 
   h2 {
     text-align: center;
+    @include laptop {
+      text-align-last: left;
+    }
   }
+
   p {
     text-align: center;
     font-size: 1.5rem;
+    @include laptop {
+      text-align: start;
+    }
+    margin-bottom: 1rem;
   }
 }
 
@@ -46,11 +73,12 @@
   grid-area: contact;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-content: space-between;
   height: 100%;
 
   &--phone-wrapper {
+    margin-top: 2rem;
     display: flex;
     width: 100%;
     flex-wrap: nowrap;
@@ -58,6 +86,7 @@
   }
 
   &--email-wrapper {
+    margin-top: 2rem;
     display: flex;
     width: 100%;
     flex-wrap: nowrap;
@@ -79,6 +108,9 @@
   height: 100%;
   h2 {
     text-align: center;
+    @include laptop {
+      text-align: left;
+    }
   }
 }
 
@@ -86,6 +118,10 @@
   grid-area: logo;
   display: flex;
   justify-self: center;
+  justify-items: start;
+  @include laptop {
+    justify-self: start;
+  }
 }
 
 .footer__copyright {
@@ -127,6 +163,10 @@
   font-size: 1.7rem;
   border-bottom: solid $darkGreen;
   padding: 6px;
+
+  @include laptop {
+    height: 40px;
+  }
 }
 
 input[type='email']::placeholder {
@@ -182,13 +222,31 @@ input[type='email']::placeholder {
       text-decoration: none;
       font-family: 'Montserrat', sans-serif;
       font-style: normal;
-      font-weight: normal;
+      font-weight: bold;
       font-size: 1.5rem;
       display: flex;
       align-items: center;
+      transition: color 0.3s ease;
 
-      color: #e9ffdd;
+      color: lighten($orange, 2);
+      @include laptop {
+        &:hover {
+          color: $veryLightGreen;
+          text-shadow: 0 0 14px $darkGreen;
+        }
+      }
     }
+  }
+}
+
+.footer__item--title {
+  @include tablet {
+    font-size: 2.5rem;
+    margin-top: 0;
+  }
+
+  @include desktop {
+    font-size: 2.8rem;
   }
 }
 

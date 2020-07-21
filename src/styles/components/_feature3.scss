@@ -8,13 +8,25 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
+  align-self: center;
   height: 90%;
   width: 65%;
   margin: auto;
 
   @include tablet {
-    grid-template-rows: 15% repeat(4, 1fr);
+    grid-template-rows: 20% repeat(4, 1fr);
     width: 80%;
+  }
+
+  @include laptop {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 23% 1fr 1fr;
+  }
+}
+
+.grid__feature3__title {
+  @include laptop {
+    grid-column: 1 / 3;
   }
 }
 
@@ -52,7 +64,15 @@
   color: $veryLightGreen;
 
   @include tablet {
+    font-size: 1.6rem;
+  }
+
+  @include laptop {
     font-size: 1.8rem;
+  }
+
+  @include desktop {
+    font-size: 2rem;
   }
 }
 

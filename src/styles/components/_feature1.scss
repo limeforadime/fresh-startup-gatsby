@@ -4,18 +4,59 @@
 .section__wrapper--feature1 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 20% 25% 55%;
+  grid-template-rows: 20% 22% 55%;
   gap: 2%;
   justify-content: center;
+  align-self: center;
   align-items: center;
   height: 90%;
-  margin-top: 0;
+  margin-top: 1rem;
+
+  @include laptop {
+    height: 50%;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: 10% 90%;
+    grid-template-areas:
+      'title        image'
+      'description  image';
+  }
+}
+
+.grid__feature1__title {
+  @include laptop {
+    grid-area: title;
+    justify-self: start;
+  }
+}
+
+.grid__feature1__description {
+  @include laptop {
+    grid-area: description;
+  }
+}
+
+.grid__feature1__img {
+  @include laptop {
+    grid-area: image;
+    align-self: end;
+    justify-self: center;
+  }
 }
 
 .houseplant {
   width: 180px;
   margin-right: 2rem;
+
   @include tablet {
     width: 210px;
+    margin-right: 0;
+  }
+
+  @include laptop {
+    width: 250px;
+  }
+
+  @include desktop {
+    width: 270px;
   }
 }

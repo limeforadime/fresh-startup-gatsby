@@ -15,14 +15,28 @@
   margin-left: auto;
   margin-right: auto;
 
-  @include tablet {
+  @include laptop {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 15% 1fr;
+  }
+}
+
+.grid__testimonial__title {
+  justify-self: center;
+  text-align: center;
+  @include laptop {
+    grid-column: 1 / 4;
   }
 }
 
 .testimonials__item {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: center;
+  justify-self: center;
   // padding-bottom: 2rem;
   // border-bottom: ;
 }
@@ -32,11 +46,11 @@
   flex-wrap: nowrap;
   width: 80%;
   justify-self: center;
-  justify-items: space-between;
 
   .icon-wrapper {
     flex: 1;
   }
+
   .testimonials__quote--icon {
     width: 40px;
   }
@@ -60,12 +74,18 @@
   height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 1rem auto;
+  margin: -1rem auto 3rem auto;
 
   @include tablet {
     width: 190px;
     height: 190px;
     margin: 2rem auto;
+  }
+
+  @include laptop {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 4rem;
   }
 }
 
@@ -80,5 +100,8 @@
     rgba(119, 80, 204, 0.4991911944221048) 75%,
     rgba(70, 0, 255, 0) 100%
   );
-  // background-size: 100% 4px; /* if linear-gradient, we need to resize it */
+
+  @include laptop {
+    display: none;
+  }
 }
