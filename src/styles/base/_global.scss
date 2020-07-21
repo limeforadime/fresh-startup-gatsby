@@ -12,7 +12,11 @@ html {
 
 body {
   background-color: $veryLightGreen;
+  // max-width: 1440px;
+  margin: 0 auto !important;
+  float: none !important;
 }
+
 html,
 body {
   width: 100%;

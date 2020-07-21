@@ -1,5 +1,11 @@
 @import './variables.scss';
 
+@mixin onlyPhone {
+  @media screen and (max-width: $phoneWidth-1) {
+    @content;
+  }
+}
+
 @mixin abovePhone {
   @media screen and (min-width: $phoneWidth) {
     @content;

@@ -13,7 +13,7 @@ const Feature1 = () => {
   return (
     <section id="feature1" style={backgroundStyle}>
       <div className="section__wrapper section__wrapper--feature1">
-        <h2 className="section__title section__title--light">
+        <h2 className="section__title section__title--light mt-responsive">
           A new way to do the thing.
         </h2>
         <p className="feature__description feature__description--light">

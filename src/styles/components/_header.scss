@@ -42,13 +42,17 @@ nav {
   color: $purple;
   font-style: normal;
   letter-spacing: 4px;
-  font-size: 3.3rem;
+  font-size: 3.1rem;
   font-weight: normal;
   line-height: 74px;
   font-family: 'Sirin Stencil', cursive;
 
   @include tablet {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+  }
+
+  @include desktop {
+    font-size: 4rem;
   }
 }
 
@@ -65,6 +69,32 @@ nav {
   right: 0;
   top: 0;
   position: absolute;
+
+  @include tablet {
+    display: flex;
+    position: initial;
+    margin-right: 6%;
+    width: 50%;
+    transform: none;
+    align-self: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 8vh;
+    top: initial;
+    background-color: transparent;
+    margin-right: 7%;
+  }
+
+  @include laptop {
+    width: 55%;
+    max-width: 650px;
+  }
+
+  @include desktop {
+    width: 48%;
+    max-width: 750px;
+    margin-right: 13%;
+  }
 
   &--active {
     overflow-x: hidden;
@@ -83,48 +113,41 @@ nav {
   li:last-child a {
     color: $orange;
     font-weight: bold;
+    @include tablet {
+      &:hover {
+        color: $purple;
+        text-shadow: 0 0 9px darken($darkGreen, $amount: 5);
+      }
+    }
   }
 
   a {
     overflow: hidden;
     font-size: 1.9rem;
-    transition: color 0.4s ease;
+    transition: all 0.2s ease;
     text-decoration: none;
     color: $veryLightGreen;
 
     @include tablet {
-      font-size: 14px;
+      font-size: 1.4rem;
       line-height: 25px;
       color: $darkGreen;
 
       font-weight: bold;
       &:hover {
         color: $purple;
+        text-shadow: 0 0 9px darken($darkGreen, $amount: 5);
       }
     }
 
     @include laptop {
-      font-size: 18px;
+      font-size: 1.8rem;
       letter-spacing: 2px;
     }
-  }
 
-  @include tablet {
-    display: flex;
-    margin-right: 6%;
-    width: 50%;
-    flex-direction: row;
-    justify-content: space-between;
-    height: initial;
-    top: initial;
-    background-color: transparent;
-    margin-right: 10%;
-  }
-  @include laptop {
-    width: 60%;
-  }
-  @include desktop {
-    width: 50%;
+    @include desktop {
+      font-size: 2rem;
+    }
   }
 }
 
@@ -142,6 +165,7 @@ nav {
   padding-top: 3rem;
 
   div {
+    pointer-events: none;
     width: 30px;
     height: 4px;
     background-color: $purple;
@@ -155,7 +179,7 @@ nav {
   }
 }
 
-.toggle {
+.toggle-hamburger {
   .line1 {
     transform: rotate(-45deg) translate(-11px, 6px);
     background-color: $veryLightGreen;

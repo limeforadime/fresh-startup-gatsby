@@ -13,6 +13,9 @@
     'feature3'
     'testimonials'
     'footer';
+  @include tablet {
+    grid-template-rows: 8vh 500px 600px 600px 850px 1200px 800px;
+  }
 }
 
 #header {
@@ -22,6 +25,7 @@
 #hero {
   grid-area: hero;
   overflow: hidden;
+  position: relative;
 }
 
 #feature1 {
@@ -48,18 +52,4 @@
   grid-area: footer;
   display: flex;
   background-color: $purple;
-}
-
-.section__wrapper {
-  margin-left: 3rem;
-  margin-right: 3rem;
-  // Saw this on one of Brad's videos, might be helpful:
-  //   display: grid;
-  //   grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
-
-  // And then the content he wanted in the two center columns
-  // had this applied:
-  //   .content-wrap {
-  //     grid-column: 2 / 4;
-  //   }
 }

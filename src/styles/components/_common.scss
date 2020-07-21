@@ -1,11 +1,33 @@
 @import '../base/variables';
 @import '../base/media-queries';
 
+.section__wrapper {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  @include tablet {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  // Saw this on one of Brad's videos, might be helpful:
+  //   display: grid;
+  //   grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+
+  // And then the content he wanted in the two center columns
+  // had this applied:
+  //   .content-wrap {
+  //     grid-column: 2 / 4;
+  //   }
+}
+
 .section__title {
   justify-self: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 2.2rem;
+
+  @include tablet {
+    font-size: 2.8rem;
+  }
 
   &--dark {
     color: $darkGreen;
@@ -29,6 +51,10 @@
   }
   &--light {
     color: $veryLightGreen;
+  }
+  @include tablet {
+    letter-spacing: 0.04em;
+    line-height: 2.1rem;
   }
 }
 
@@ -55,4 +81,13 @@
 .mlr-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.mt-responsive {
+  @include tablet {
+    margin-top: 2rem;
+  }
+  @include laptop {
+    margin-top: 3rem;
+  }
 }

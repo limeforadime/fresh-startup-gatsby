@@ -99,13 +99,13 @@
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 4rem;
   line-height: 65px;
-
-  display: flex;
-  align-items: center;
-  text-align: center;
   color: $lightGreen;
+
+  @include tablet {
+    font-size: 4.3rem;
+  }
 }
 
 .footer__phone-icon {

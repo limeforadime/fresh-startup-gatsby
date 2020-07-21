@@ -4,6 +4,7 @@
 #hero {
   width: 100%;
   height: 100%;
+  position: relative;
   background-color: #e9ffdd;
 }
 
@@ -12,6 +13,10 @@
   flex-direction: column;
   align-items: center;
   margin: 0 auto 0 auto;
+  @include tablet {
+    align-items: flex-end;
+    margin-right: 15%;
+  }
 }
 
 .hero__title {
@@ -21,6 +26,20 @@
   font-size: 2.5rem;
   color: #8158db;
   margin: 9rem auto 4rem auto;
+  @include tablet {
+    font-size: 3.3rem;
+    margin: 9rem 0 4rem 0;
+  }
+
+  @include laptop {
+    font-size: 3.5rem;
+    margin-right: 6%;
+  }
+
+  @include desktop {
+    font-size: 4rem;
+    margin-right: 9%;
+  }
 }
 
 .hero__cta-btn {
@@ -33,7 +52,7 @@
   font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 23px;
   text-decoration: none;
   margin-top: 1rem;
@@ -41,8 +60,83 @@
   color: $veryLightGreen;
   transition: all 0.2s ease;
 
-  &:hover {
-    background-color: darken($orange, 15%);
-    color: white;
+  @include tablet {
+    width: 190px;
+    height: 58px;
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    &:hover {
+      background-color: darken($orange, 15%);
+      color: white;
+    }
+  }
+
+  @include laptop {
+    margin-right: 6%;
+  }
+
+  @include desktop {
+    margin-right: 9%;
+  }
+}
+
+// .hero__background {
+//   background-position: 10% 90%, bottom;
+//   background-repeat: no-repeat;
+//   // background-size: 30%, auto;
+//   background-size: 20%, cover;
+
+//   @include tablet {
+//     // background-size: 20%, auto;
+//   }
+// }
+
+.grass__wrapper {
+  height: 30%;
+  width: 100%;
+  bottom: 0;
+  background-image: url('/images/grass.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  position: absolute;
+  z-index: 0;
+
+  @include tablet {
+    height: 35%;
+  }
+
+  @include laptop {
+    height: 38%;
+  }
+  @include desktop {
+    background-image: url('/images/grass-large.svg');
+    height: 50%;
+  }
+}
+
+.humaaan__wrapper {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 29%;
+  background-position: bottom 15% left 12%;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+
+  @include tablet {
+    background-size: 23%;
+    background-position: bottom 16% left 10%;
+  }
+
+  @include laptop {
+    background-size: 18%;
+    background-position: bottom 20% left 10%;
+  }
+
+  @include desktop {
+    background-size: 12%;
+    background-position: bottom 35% left 23%;
   }
 }

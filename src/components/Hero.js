@@ -1,23 +1,23 @@
 import React from 'react';
 import humaaan from '../assets/images/humaaan.svg';
-import grass from '../assets/images/grass.svg';
+// import grass from '../assets/images/grass.svg';
 
-const backgroundStyle = {
-  backgroundImage: `url(${humaaan}), url(${grass})`,
-  backgroundPosition: '10% 90%, bottom',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: '30%, auto',
+const humaaanBackgroundStyle = {
+  backgroundImage: `url(${humaaan})`,
 };
 
 const Hero = () => {
   return (
-    <main id="hero" style={backgroundStyle}>
+    // <main id="hero" className="hero__background" style={backgroundStyle}>
+    <main id="hero">
       <div className="section__wrapper--hero">
         <h1 className="hero__title">Looking for a Fresh start?</h1>
         <a href="#footer" className="hero__cta-btn">
           FIND OUT MORE
         </a>
       </div>
+      <div className="humaaan__wrapper" style={humaaanBackgroundStyle}></div>
+      <div className="grass__wrapper"></div>
     </main>
   );
 };

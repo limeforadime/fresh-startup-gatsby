@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 // import ReactCSSTransitionGroup from 'react-transition-group';
 import Modal from './Modal';
 import logo from '../assets/images/logo.svg';
+import Hamburger from './Hamburger';
 
 const Header = ({
   isSidebarOpen,
@@ -21,23 +22,30 @@ const Header = ({
         </div>
         <ul className={navLinksStyle}>
           <li>
-            <Link to="/about">About Us</Link>
+            <Link to="/about" onClick={closeSidebar}>
+              About Us
+            </Link>
           </li>
           <li>
-            <a href="#feature3">Our Advantages</a>
+            <a href="#feature3" onClick={closeSidebar}>
+              Our Advantages
+            </a>
           </li>
           <li>
-            <a href="#testimonials">Testimonials</a>
+            <a href="#testimonials" onClick={closeSidebar}>
+              Testimonials
+            </a>
           </li>
           <li>
-            <a href="#footer">Sign Up</a>
+            <a href="#footer" onClick={closeSidebar}>
+              Sign Up
+            </a>
           </li>
         </ul>
-        <div className="burger" onClick={toggleSidebar}>
-          <div className="line1"></div>
-          <div className="line2"></div>
-          <div className="line3"></div>
-        </div>
+        <Hamburger
+          isSidebarOpen={isSidebarOpen}
+          toggleSidebar={toggleSidebar}
+        />
       </nav>
     </header>
   );

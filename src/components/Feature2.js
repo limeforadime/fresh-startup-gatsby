@@ -4,7 +4,7 @@ const Feature2 = () => {
   return (
     <section id="feature2">
       <div className="section__wrapper section__wrapper--feature2">
-        <h2 className="section__title section__title--dark">
+        <h2 className="section__title section__title--dark mt-responsive">
           This has never been possible before.
         </h2>
         <p className="feature__description feature__description--dark">
