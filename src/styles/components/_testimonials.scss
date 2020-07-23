@@ -33,10 +33,12 @@
   display: flex;
   flex-direction: column;
   height: 50%;
-  align-content: flex-start;
-  align-items: flex-start;
+  width: 85%;
+  margin: auto;
+  // align-content: flex-start;
+  // align-items: flex-start;
   justify-content: center;
-  justify-self: center;
+  justify-self: stretch;
   // padding-bottom: 2rem;
   // border-bottom: ;
 }
@@ -46,17 +48,20 @@
   flex-wrap: nowrap;
   width: 80%;
   justify-self: center;
+  align-items: center;
+  justify-items: flex-start;
 
   .icon-wrapper {
-    flex: 1;
+    flex: 1.5;
   }
 
   .testimonials__quote--icon {
     width: 40px;
+    justify-self: flex-start;
   }
 
   .testimonials__description {
-    align-self: center;
+    // align-self: center;
     flex: 3.5;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
@@ -71,20 +76,22 @@
 
 .testimonials__img {
   width: 140px;
-  height: 140px;
+  // height: 140px;
+  padding: 0;
+  box-sizing: border-box;
   border-radius: 50%;
   object-fit: cover;
-  margin: -1rem auto 3rem auto;
+  margin: -1rem auto 4rem auto;
 
   @include tablet {
     width: 190px;
-    height: 190px;
+    // height: 190px;
     margin: 2rem auto;
   }
 
   @include laptop {
     width: 220px;
-    height: 220px;
+    // height: 220px;
     margin-bottom: 4rem;
   }
 }

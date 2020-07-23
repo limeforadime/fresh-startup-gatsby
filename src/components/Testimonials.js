@@ -12,7 +12,7 @@ const Testimonials = () => {
         <div className="testimonials__item">
           <img
             className="testimonials__img"
-            src="https://source.unsplash.com/kMJp7620W6U"
+            src="https://source.unsplash.com/kMJp7620W6U/500x500"
             alt=""
           />
           <div className="testimonials__quote__wrapper">
@@ -32,7 +32,7 @@ const Testimonials = () => {
         <div className="testimonials__item">
           <img
             className="testimonials__img"
-            src="https://source.unsplash.com/Vaznn9k5GqQ/800x600"
+            src="https://source.unsplash.com/6W4F62sN_yI/500x500"
             alt=""
           />
           <div className="testimonials__quote__wrapper">
@@ -52,7 +52,7 @@ const Testimonials = () => {
         <div className="testimonials__item">
           <img
             className="testimonials__img"
-            src="https://source.unsplash.com/ySTdW42Y7og/800x600"
+            src="https://source.unsplash.com/ySTdW42Y7og/500x500"
             alt=""
           />
           <div className="testimonials__quote__wrapper">
